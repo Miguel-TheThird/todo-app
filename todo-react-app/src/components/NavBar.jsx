@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useState}  from "react";
+import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 
-const NavBar = () => {
+ const NavBar = () => {
+   
+  const [openModal , setOpenModal] = useState(false)
+
+  const modalHandler = () =>{
+    setOpenModal(true)
+  } 
+
     return(
         <nav>
-        <button>Settings</button>
+        <button  onClick={modalHandler} >Settings</button>
+        { openModal && <Modal setOpenModal={setOpenModal}/>} 
         <h4>To-do List</h4>
         <Link to='/'>
-        <button>logout</button>
+        <button >Logout</button>
         </Link>
       </nav> 
     )
@@ -16,4 +25,3 @@ const NavBar = () => {
 
 export default NavBar;
 
-//react, react-dom, react-router, redux, react-redux, axios or fetch

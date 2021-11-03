@@ -4,13 +4,13 @@ import App from "../App";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function SignIn(){
-    const [password, setPassword] = useState('')
+    const [userName, setUserName] = useState('')
     const [errorMessage, setErrorMessage] = useState('');
-    const path = "/dashboard"
+    
     
 
-     function checkPassword(input) {
-        const userInput = /^[A-Za-z]\w{7,14}$/;
+     function checkUserName(input) {
+        const userInput = /^[A-Za-z]\w{5,14}$/;
         if (input.match(userInput)) {
           return true;
         }
@@ -20,18 +20,18 @@ function SignIn(){
     const handleInputChange = (e) =>{
         let inputValue = e.target.value;
         console.log(inputValue)
-        setPassword(inputValue)
+        setUserName(inputValue)
     }
       
 
     const handleFormSubmit = (e) => {
         
 
-        if(!checkPassword(password)) {
-          setErrorMessage(`Password must be 4 digits long`);
+        if(!checkUserName(userName)) {
+          setErrorMessage(`User Name must be 5 digits long`);
           e.preventDefault();
         }
-        setPassword('');
+        setUserName('');
         
     };
     
@@ -40,8 +40,8 @@ function SignIn(){
         <div>
         <form className="signInForm">
             <div >
-                <label>Name</label>
-                <input placeholder="4+ characters" type="text" onChange={handleInputChange}value={password} />
+                <label>User Name</label>
+                <input placeholder=" 4+ Characters" type="text" onChange={handleInputChange}value={userName} />
             </div>
             <Link to='/dashboard'>
                 <Route path="/dashboard" component={App} /><button onClick={handleFormSubmit} type="submit">login</button>
