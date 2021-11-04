@@ -13,11 +13,11 @@ const SideBar = (props) => {
     return(
         <aside>
               <div className="todo-container">
-                <label htmlFor="select-status">List of TODOS  </label>
-                <select onChange={statusHandler} name="select-status" id="status">
-                  <option value="all">All Todos</option>
-                  <option value="completed">Completed</option>
-                  <option value="uncompleted">Uncompleted</option>
+                <label htmlFor="select-status">List Of Todos&nbsp;&nbsp;</label> 
+                <select className={"select"} onChange={statusHandler} name="select-status" id="status">
+                  <option className={"option"} value="all">All Todos</option>
+                  <option className={"option"} value="completed">Completed</option>
+                  <option className={"option"} value="uncompleted">Uncompleted</option>
                 </select>
               </div>
               <ol>

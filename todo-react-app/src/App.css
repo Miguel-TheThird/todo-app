@@ -1,84 +1,104 @@
 body {
   width: 100%;
   height: 100%;
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-      
+  
  }
  nav {
-  width: 110%;
+  color: #2E1114;
+  font-size: 30px;
+  width: 100%;
   height: 50%;
   display: flex;
   justify-content: space-between;
-  border: 3px solid green;
+  border: 3px solid #2E1114;
  }
  nav > button {
-  height: 100%;
+  width: 100%;
   width: 90px;
  }
  main {
   display: flex;
   flex-direction: column;
-  width: 110%;
-  height: 100%;
+  width: 100%;
+ height: 100%;
  }
  /* ---------------- Add todo's section----*/ 
  main > section {
-  width: 100%;
-  height: 50%;
+  color: white;
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid blue; 
+  border: 3px solid #2E1114; 
  }
  section > form {
-  width: 300px;
+  color: #2E1114;
+  font-size: 20px;
+  width: 350px;
   height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px solid gold;
+  border: 3px solid #2E1114;
  }
  section > form > .input-wrapper {
-  width: 80%;
+  width: 90%;
   display: flex;
  }
  /* ---------------- Side bar section----*/
  main > aside {
+  font-size: 30px;
+  color: white;
   width: 100%;
-  border: 3px solid red;
+  border: 3px solid #2E1114;
   display: flex;
   flex-direction: column;
   flex: 3 auto;
  } 
+
+ .option{
+  font-size: 20px;
+ }
+
+ .select{
+   font-size: 20px;
+ }
+
+
  aside > ol {
   width: 100%;
   padding: 1rem 1rem 1rem 2rem;
  }
 
  .todo-container {
+   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: turquoise;
+  background-color: #501B1D;
 }
 
 .todo{
+  width:400px;
   display: flex;
   justify-content:center;
   align-items: center;
   margin-bottom: 10px;
-  background-color: tomato;
+  background-color: #64485c;
+  font-size: 25px;
 }
 
 .buttons{
-  margin-left: 10px;
-  margin-bottom: 5px;
+  width: 120px;
+    height: 45px;
+    margin: 2px;
+    border: none;
+    background-color: #501b1d;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .todo-item {
@@ -93,11 +113,24 @@ body {
 /* ---------------- Sign In------*/
 
 .signInForm{
-  width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    padding: 25px;
+}
+
+.sign{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  background-color: #83677b;
+  border-radius: 12px;
+  background-color: #83677b;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
